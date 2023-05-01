@@ -1,0 +1,157 @@
+<html>
+<head>
+<script>
+function fun(n){
+
+		if(n=="="){
+	    f1.screen.value=eval(f1.screen.value);
+		
+	    }
+		else if(n=='C'){
+		f1.screen.value=' '
+		
+		}
+		
+		else if(n=='R'){
+		ans=f1.screen.value
+		f1.screen.value=ans.substr(0,ans.length-1)
+		
+		}
+	
+		else{
+		f1.screen.value=f1.screen.value+n
+		}
+	
+	}
+
+</script>
+<style>
+*{
+padding:0px;
+margin:0px;
+}
+body{
+background:url('goggles.jpg');
+background-size:100% 100%;
+}
+
+
+
+form{
+border:1px solid black;
+height:580px;
+width:500px;
+position:relative;
+left:500px;
+top:100px;
+background:#2E4053;
+}
+.main{
+position:relative;
+left:80px;
+top:65px;
+text-align:center;
+border:5px solid white;	
+height:380px;
+width:330px;
+}
+.btn{
+height:55px;
+width:55px;
+font-weight:bold;
+cursor:pointer;
+font-size:20;
+}
+.btn1{
+height:55px;
+width:170px;
+font-weight:bold;
+cursor:pointer;
+font-size:20;
+position:relative;
+left:-3px;
+}
+.btn:hover,.btn1:hover{
+color:red;
+background:black;
+}
+
+.input{
+height:50px;
+width:330px;
+font-size:27;
+border:2px solid black;	
+
+}
+.txt1{
+height:50px;
+width:330px;
+position:relative;
+top:80px;
+left:80px;
+border:5px solid white;
+
+}
+h2{
+color:white;
+position:absolute;
+top:20px;
+left:80px;
+font-size:30px;
+font-family:cursive;
+}
+</style>
+
+</head>
+<body>
+<form name='f1'>
+ <h2>+++ CALCULATOR +++</h2>
+ <div class='txt1'>
+ <input type="text" class='input' name="screen" autofocus />
+ </div>
+ <br><br>
+ <div class='main'>
+ <br>
+ <input type="button" value="+" class='btn' onclick="fun('+')"/>
+ <input type="button" value="-" class='btn' onclick="fun('-')"/>
+ <input type="button" value="*"  class='btn' onclick="fun('*')"/>
+ <input type="button" value="/"  class='btn' onclick="fun('/')"/>
+ <br><br>
+ <input type="button" value="7" name="t7" class='btn' onclick="fun(7)"/>
+ <input type="button" value="8" name="t8" class='btn' onclick="fun(8)"/>
+ <input type="button" value="9" name='t9' class='btn' onclick="fun(9)"/>
+ <input type="button" value="R" class='btn'  onclick="fun('R')"/>
+ <br><br>
+ 
+ <input type="button" value="4" name="t4" class='btn' onclick="fun(4)"/>
+ <input type="button" value="5" name="t5" class='btn' onclick="fun(5)"/>
+ <input type="button" value="6"  name='t6' class='btn' onclick="fun(6)"/>
+ <input type="button" value="C" class='btn'  onclick="fun('C')"/>
+ <br><br>
+ 
+ <input type="button" value="1" name="t1" class='btn' onclick="fun(1)"/>
+ <input type="button" value="2" name="t2" class='btn' onclick="fun(2)"/>
+ <input type="button" value="3" name='t3' class='btn' onclick="fun(3)"/>
+ <input type="button" value="="  class='btn' onclick="fun('=')"/>
+  
+ <br><br>
+ 
+ <input type="button" value="0" class='btn1' name="t0" onclick="fun(0)"/>
+ <input type="button" value="." class='btn' name="tdot" onclick="fun('.')"/>
+ 
+ <br><br>
+ 
+ 
+ 
+ </div>
+ 
+ 
+
+</form>
+
+
+</body>
+</html>
+
+
+
